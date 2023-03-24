@@ -1,0 +1,204 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Initialize_Applications" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property sap2010:Annotation.AnnotationText="Dictionary structure to store configuration data of the process (settings, constants and assets)." Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>636.6666666666666,2116</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Initialization_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Management.Automation</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>System.Reflection</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="76">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Management.Automation</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>TimeSpan2</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:Annotation.AnnotationText="Open applications used in the process and do necessary initialization procedures (e.g., login)." DisplayName="Initialize All Applications" sap:VirtualizedContainerService.HintSize="646.6666666666666,2051.3333333333335" sap2010:WorkflowViewState.IdRef="Sequence_9">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log message (Initialize applications)" sap:VirtualizedContainerService.HintSize="584.6666666666666,96" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Opening applications...&quot;]" />
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Browser Chrome: OrangeHRM" sap:VirtualizedContainerService.HintSize="584.6666666666666,1774" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="a979f453-d5cb-493a-bc4b-0a739b0abe97" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Log in" sap:VirtualizedContainerService.HintSize="550.6666666666666,1554.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_10">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="488.6666666666667,714" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <TryCatch.Try>
+                <Sequence sap:VirtualizedContainerService.HintSize="450,474.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NClick ClickType="Single" DisplayName="Click 'Sachin Roy'" sap:VirtualizedContainerService.HintSize="388,159.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a979f453-d5cb-493a-bc4b-0a739b0abe97" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://opensource-demo.orangehrmlive.com/web/index.php/time/viewTimesheet/employeeId/7" DesignTimeRectangle="1710, 203, 91, 24" DesignTimeScaleFactor="1.5" ElementType="Text" FriendlyName="'Sachin Roy'" FullSelectorArgument="&lt;webctrl tag='P' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='P' type='' class='oxd-userdropdown-name' aaname='*' check:innerText='Sachin Roy' /&gt;" Guid="8359ecdc-0d7f-4cb5-a80c-de5635b10784" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAF8AAAAcCAYAAAAHgGM3AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAASsSURBVGhD7VjNahtJEPZrbV5DL7Av4FN2Dz5tTkaXwIIPi31Iwi6rYHAIJDlEmBDtYoQJs16MDkYgrICxjYkxwZbG86OZ2qruqp6eP2kky2sfpuGjNdW/9XXN16VZGf/8BMY/IaSu8b9hxSXSEWW1QD3ToGxdY2Gs6B8/sEFqwaznGneBlp0yUKdZdY2FUWv+A2Jhzc8+m7pGZZRo/qxakH2uMQ9qzX9A5DW/+QyCXh9iF5IS+RBf9SD8sAquNXg52IAJreU6EBS2Cxrg/f4M/Ndr4DWL2ufFe4i0d/lC/n7vQ/imUTBueUhrfnMDomvewPUQoqM2hP90Ibq4xA1pc/zvmh4sh3VnVCWf+8ENTN4Vtc8LJt8bwsRBPw3YX1WWtVYxUprvHZyqJePBBke4pen0Rhz3YbLNz0tDVfJXIegSOTsQbBW1zwsmv2RdzzmjVoCvr3Jty0JK88NzWg1P+wPbqNOs+s6oSv6yMZ388TsHYmq/eJ9vWxJSmh989Wk5K/KnoQH+bgei7zdGkiC6wbEt8DJ9b9+2dT8p4Q1KWgt8pd0W+W+w30jvgUp80YHA0vfwgqxDCGVuJigebILvDCG29hEdzvJhBvm7PTUVnLZSdu8zypK1R3AvIXKe81pPYXJFRh+ij8kYjVUIv1HbpbGlNV9Om8roDAnCV/wPvGSlnQZx7W61dV9afNDRd8M1H15/wyzgfurpfnQwx12tqVd0ELJBJt/DsXTRnXAfnoucFxLLyFdjQ9wH3VFHmCyEZMT5/5p2YQr5PQhe00Vu4RMGlbpfcI7dZA7vy5CMei3y+Qh9U/0Sn929vjac7qQPf7ur94p2seXyfBWlIzU8KUTcCUbhn7YzGPnbv6QXaO5ARB6NHPCVbRMijyYgKUsTcbu9zm+IXKTogPM06dOUCxHJYVsp+dEZhC/YhnCFpKl6zfOXlfAMJp+t/Rhf0G6tNW6+MvZQ3UXSD/dpvbXBMQVT+o0ozfNvXz6HYJ+j1OzSIpH68SQE97c1jJqWjhh5ld8yOVednBQlEPItUkvspeSfZ3RZ7FP1Wg7XznbQX1ozwshOEY+QOb+1c3IWDLSkRvv62TvUl3V8sKr7SFBedzkoNfJ5fhGamGnwArS4IpKyn8EZv+KZIuR/ZN2cSoKl+UX2CuTTHZWMS+yVyM+uu4V2aohwHTurmuKLIf8L2zJkeweZw2BU/7bTFI3Xm/V7nAu7GDmHVuTQKycOCQlVIv+xkI8wgXa8mdhlzgqRr2xGZtZhQv+dLPkUpPN8p6du7lvTIcnzTd7Lt3/utAkvOqkDmkvzHxH5JvqNjhOqaj5DLtiR5ik+Wk/aGJbmr0Go0iQsmArG5z2thYcOZydkR8df6oHu33yrc5YxGWCqpzIWtFkOmQxhVrbzmMhHFEV/lWwngaSWVDIHw8ho/o/g7yPZdu5OhQ7jpA3+r8lAle1Qbi2aT7n7XquQyFxuXJbnW2MemvyxpNKZSJ+e56fhGrXIpJ2M+nv+vaEBofpac1n6Sab+nn9fEM2X7LAApXm+AnWaVdcoQMN8qon20omGjWp5fo17wcKab+oaC6NE8wW1xt8nas1/MDyB/wAwjZ8kRIIkCwAAAABJRU5ErkJggg==" InformativeScreenshot="96c07b01ff6d6f1e0527c02efdb5b05f.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='OrangeHRM' /&gt;" SearchSteps="FuzzySelector, Image" Version="V2" Visibility="Interactive" />
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                  <uix:NClick ClickType="Single" DisplayName="Click 'Logout'" sap:VirtualizedContainerService.HintSize="388,159.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a979f453-d5cb-493a-bc4b-0a739b0abe97" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index" DesignTimeRectangle="1606, 400, 240, 42" DesignTimeScaleFactor="1.5" ElementType="Text" FriendlyName="'Logout'" FullSelectorArgument="&lt;webctrl aaname='Logout' aria-role='menuitem' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Logout' aria-role='menuitem' tag='A' type='' class='oxd-userdropdown-link' check:innerText='Logout' /&gt;" Guid="c01f9447-102d-418b-a8a6-fdddf2820b20" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAPQAAAAuCAYAAAAfijS3AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAANbSURBVHhe7drpU9NAGIBx//+P3jMgoCBHoRxSQCvIIXIOKA4g91WucgmFFlqLr3m3Sa1cKjA0XZ7fDIObLNAvTzbZ+CAej0t0a0cAFC5teGf7QAgasABBAxYhaMAiBA1YhKABixA0YBGCBixC0IBFCBqwCEEDFiFowCIEDViEoAGLEDRgEYIGLELQgEXyEvT41IJUBsNyfJJ0jwC4DQR9A0OjkzI5veiOgPwj6BtobOuR7v7P7gjIP4K+AYKG3/g66BPnfLhrUJ6XNcjDooAUlTfJ4OiEnJ7+dGdkePOelgblUXGtlFW3yOxC5MLgxiZmpaQyZOY9KQlKKNwrR/GEe1ZkeXVTXta0yv7BoXskQ8f6mfW7fn79PLlfxRVvzv0McNd8G3Q6nZZmJ7aG1m45PMoEt7277/zcO+nJifSieXvfYxIMdUppVeiPoDVmPRZZi5qxXgjau4elquG9JBIn5ti/BO1hhYbf+DbobzNLUlH7NhupZ21j20S5Ec181um5ZXnprMgHsSMz9mxt75kV3QtOz78KtMrM/IoZe5KpH1LT2C4DI+NmTNAoZNmgF5fXfRV016dRaW3vc0e/JZMpqaoPm9+hLpuXTp9KsLkzG9xSZMO9QMTNOFfvwJiJUxE0CplvV+irYtFzfUNfs/++ap537qq/qeeqndvuZCpF0Chovg36spU35dwiB5rab3WF1tttjVNdFnRkPXruOEHDb3wbtHmGrjv/DK3PxhrWdZ6hywNtMre4asYe3VTTDTTvGVqD1Xne7/eMjE2d28nWC4leUAC/8G3QGpq+UtJVMHGc2YH+n13uuuYPJsDcFVR3ufVisLq+ZcYX7XLryt7Q0iVtHf1mw0zpRprOObtC60VHX5FtRHfdI0B+5S3os+9xc7+82+nrvIfWeboL7r2H1g2vXH97D632ndVcV22d8/hFndSHumTFuRU/+wytF5OPA1/M39Uvva0H8ikvQd8F8wztRMn/tcZ9UvBB6217R8+wzC+tmhVT6XddyV87t+dnn8EBm1mxQq9v7ki989z7rKze3HJ7t8n6LA3cJ1YEDSCDoAGLEDRgEYIGLELQgEUIGrAIQQMWIWjAIgQNWCQbdCKRIGigwGnDuzsxggZsQNCARQgasEgm6Jj8Arzh2QsFYdmEAAAAAElFTkSuQmCC" InformativeScreenshot="7709d450901abb75184febf3976df55c.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='OrangeHRM' /&gt;" SearchSteps="FuzzySelector, Image" Version="V2" Visibility="Interactive" />
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                </Sequence>
+              </TryCatch.Try>
+              <TryCatch.Catches>
+                <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="454.6666666666667,22" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ActivityAction x:TypeArguments="s:Exception">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                    </ActivityAction.Argument>
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,96" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;CRM not closed&quot;]" />
+                  </ActivityAction>
+                </Catch>
+              </TryCatch.Catches>
+            </TryCatch>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Username'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="488.6666666666667,222.66666666666666" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="a979f453-d5cb-493a-bc4b-0a739b0abe97" Text="Admin" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://opensource-demo.orangehrmlive.com/web/index.php/auth/login" DesignTimeRectangle="534, 548, 485, 45" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl name='username' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl name='username' tag='INPUT' type='' class='oxd-input oxd-input--active oxd-input--error' aaname='' /&gt;" Guid="2163d7be-82fd-4984-a1ea-0ad8d8112e44" ImageBase64="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" InformativeScreenshot="0cb07db0227d878ccdff9248fef0d611.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='OrangeHRM' /&gt;" SearchSteps="FuzzySelector, Image" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="554, 525, 55, 16" ElementType="Text" FriendlyName="'Username'" FullSelectorArgument="&lt;webctrl tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' class='oxd-label' aaname='Username' check:innerText='Username' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADsAAAAUCAYAAAAz30VQAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJvSURBVFhH7VTPa+JQEPaP9eDFSw4WRFiKFDwEIugKEcxB6Co00ENFQaVYWA+WEhY9RJAtrdSiBCFCqaC03857bxIVCrseV/1gIG/mzbz55kciOCKcyB4qTmQPFcdJ9rVdRNQa8CnADPWMjnyfj/85TmQ32CXrOTZSCR1RTUcsfYnOVOl992ajz9xg8C607Fu7g/GNbCJ2v4oo2VtXRcTobjRRRNl9kzGwcFHJFpSeRDPv8Cr00yZSWhV2u8Q+JdRHI7prhO8NVzICsBqjZXKMRAFGd8IGhT3IujC1HMpP0oDVyy84gqxIJllFb6H0vlNFXMZRvlG9geH8DTIfQVYrwHJ9cYJHBKL6LTx58uFNl/ILmKOu87uSrIG8o3x+X+UoRhF1WegxKmkdF11hW8KxDKRqY/UWEbczwT2FPcjO0fluQMtSZ9xHeFxNT/hxN0LJNKkryte4DwgQBNm0sDEk+Soc8f3+iDp1ReMJEZJqz8LO9qQD5ynjKzgW35PN2MqBZXsFd8maD6oqIQbIU1WtER+xhv80QOv6ksY2B9NdKrJhd7axXSiGHOOvyco4mQaeZQI+OtldsrIghL+RNV2l/wohWbw0cEbjURmpcRFj8VyjwMlrDOV5hmF/EhZDjFP8B1WB/cqB32KEn33x+H5k/S6NdGAjgueU+H5kl+iZOuJmj6duDe/+gXNX2JAl+G4DF2m1+ELiuo3enI20A2LMgh9ILGPD4T0VP67zJOuTJVjOjIqyH1lgQmsi9pFiZG9hByT+mSyBV0HlaODMbGLIOQrskD10nMgeKiL4/MSxSAQfHzgWiWC9pr/0McgafwCsInU3SCklVwAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Password'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="488.6666666666667,222.66666666666666" sap2010:WorkflowViewState.IdRef="NTypeInto_2" IsPassword="True" ScopeIdentifier="a979f453-d5cb-493a-bc4b-0a739b0abe97" Text="admin123" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://opensource-demo.orangehrmlive.com/web/index.php/auth/login" DesignTimeRectangle="534, 653, 485, 45" DesignTimeScaleFactor="1" ElementType="InputBoxPassword" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='password' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='password' class='oxd-input oxd-input--active oxd-input--error' aaname='' /&gt;" Guid="611fcacf-17ce-45ca-8668-606801a97ab5" ImageBase64="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" InformativeScreenshot="473773285aaa184f3d38a3b51e4ef082.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='OrangeHRM' /&gt;" SearchSteps="FuzzySelector, Image" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="554, 631, 54, 16" ElementType="Text" FriendlyName="'Password'" FullSelectorArgument="&lt;webctrl aaname='Password' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Password' tag='LABEL' type='' class='oxd-label' check:innerText='Password' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADoAAAAUCAYAAADcHS5uAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJQSURBVFhH7VXPa+JQEPaP9eDFSw5dEEHCUghLIIJuwYKBLaQrrOChiwVXioIeDEso9ZBCEFRoaSlChLaBSP123o+NEWrFZS81/WDgzZfnm/lm5j1TSAg+hO4bPoTuG5In9LZ9jLSir5lSaWH0LDe8Izimjnz7XnoC60LNofQYfAxMA9lTV/rvBzsKJVzVkNZauMUCk34Nak52++AYJ+4j3/I0bsEoCD6Tq77JD0/XCzdpHCFd7FJJBULbQlqX/uwSpmbIeEcw+jd8D+5ayCs11PsWlAMd5SvGdVexiuc4+bqL0NBHL9bRcHYDP+RLhG4dWV6AGZq6ji+2EBfOhxh4Aa028ONzKJSkw9kpvn9myVXxa858H52iDsNmv79HU9Oh/pyCh5xfopwrwfRozYXSt4aHh+cFEeKc/NrebUJZ9SIz8Cl2Rx+cOtSCgUz0XSR8/aOEjFZD0/Yw4YEFXudFUrwLTLR+gQ51We3OKMEuDhULA5bt7AIqFaDDCyDAxlFpTKVQCz1Z9E17dxvdCC4qJLxs+6JqXgPZqDPUsTsPvXYdhzQ+aizAazyPU/kN569AdhaN66hbXcXfKnQV+z8L9WDmSKjDRvGRDirJjgYYuV400k/2N3nnNvEE6pyqlJCleyuSoy4XmG/AjK7vttGNCf2n0d0olJJ1z5Cny88eBrNNax7Mp85UkWU8jXOmYKE5ZndsE88QoFchnroq6yAepVwD19Ln2PIYrYQS4o+Rdgbzrcdo35EgocslkmApvLwgCZbCgv7jEmCpZRBg/y3AHwnHIvgv1jLqAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NClick ClickType="Single" DisplayName="Click 'Login'" sap:VirtualizedContainerService.HintSize="488.6666666666667,159.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a979f453-d5cb-493a-bc4b-0a739b0abe97" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://opensource-demo.orangehrmlive.com/web/index.php/auth/login" DesignTimeRectangle="460, 915, 628, 69" DesignTimeScaleFactor="1.5" ElementType="Button" FriendlyName="'Login'" FullSelectorArgument="&lt;webctrl tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='submit' class='oxd-button oxd-button--medium oxd-button--main orangehrm-login-button' aaname=' Login ' check:innerText='Login' /&gt;" Guid="450e1bcd-cd33-46dc-89b2-457ad0984f7c" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAngAAABJCAYAAACuLlsbAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAcLSURBVHhe7d1Ba1zXGQbg/pEuvPVPsNeGQnbedNlfELwOjcGgncFeCCNjb7zoIhQTjAgyhSTCYEwptA6mDokogSLqIEyJXUJsByG+3k9zx3M1OiPNlWbu3JGfFx4Szz1zNPIivLlzzzm/CRERERE5U1HwRERERM5YFDwRERGRM5buC96bVxFbmxGPbkXcvxJx93LEjYsRK+cjrp6L+ONvAQCWS3aY7DLZabLbZMfJrpOdJ7tPx+mm4G0/jfjyesTaR+W/FACAsyw7UHah7EQdZH4FL9vq49sRq5fKvygAwIcou1F2pDne2Zt9wXv9ImLjmq9bAQCOkl0pO1N2pxlndgVvb3dw67H0CwAAMFl2qOxSM8psCt7zjcFDhaUPDADA8bJLZaeaQU5f8NY/KX9IAADay251ypy84O18b1UsAMA8ZMfKrnXCnKzg5Z4uuddL6QMBAHB62bWyc50g7Qves/XyhwAAYPaye7VMu4Kn3AEAdK9lyZu+4OUtwtIPBABg/lp8XTtdwcuH/DxzBwCwONnFplx4MV3Bs1oWAGDxspNNkeMLnn3uAAD6Y4p98o4ueLmbcmliAAAW55gTLyYXvDwPzfFjAAD9kx3tiLNrJxe8PPS2NCEAAIuXXW1CygXv9YvyRAAA9Ed2tkLKBW/jWnkSAAD6IztbIYcL3ptXEVfPlScBAKA/srNldxvL4YL3+HZ5AgAA+ie721gOF7zVS+U3AwDQP9ndxnKw4G0/Lb8RAID+yg7XyMGCZ2sUAIDlM7ZlysGC58xZYFF++N/gv0MvPytfB2CysTNqRwUvV2CU3gDQhT4VvC++jvj13cDfCtcB+qixmnZU8LY2y4MButCngrfxZPBZMv8oXAfoo+xydUYF79Gt8mCALviKFuB0ssvVGRW8+1fKgwG6oOABnE52uTqjgnf3cnkwQBdaF7wLEZsPI355N3hfZrea4z8PItYK429+XP2M7Yi9euxeNfaHO42vY//VGF99hv1UYzbGX6vGTZrr5nAswAJkl6szKng3LpYHA3ShbcH79uVgfGa3XhAxzNvnEX9qjL25EvFzfS0zXECR+Xk4z7QFryp2O/V7c47dwb/uZ3u1MQdAx7LL1RkVvJXz5cEAXWhT8D7/ejA2qoL1zcej19euR/xSX/rxzuj17+oSt1uVs/ULo9e/ejK6Czd1wauyW43983Ce6p/fVvNm9qpi+X4OgI5ll6szKnh5WG1pMEAX2hS84dj/Pjh87au/D67lnbZ7+dpKxNv6pWe/Pzx+q+0dvCp/bZTEdLP6HPtpjgfoWHa5OqOCVxoI0JWpC15V0n4aDI3vGnfv3rtT35V7F7FZ/fnew/2h1cQR98fHVlo/g1cqcUddA+hQHXfwgH6YuuA17sgV96gbu14scA0KHnBWFO/geQYPWCR38ABOp/gMnlW0wCLN6hm894Vt+Aze9Yhf65f++YfD41s/g6fgAT1VXEVrHzxgkdoUvLaraIdz5yraL343ej1X0b6PggcsueI+eE6yABZpWML2qtI23Kdu3E9VsRuOb7sP3rD4ZXLscP+6H6ux+1HwgCVXPMnCWbTAIg0L3lF5+6TxnrYnWXxaXatK4aHTJ4ZbnCh4wJIrnkW7tVkeDHCWbdb75h0ojwBLKLtcnVHBe/OqPBhg2d17ELHzMOLzxvN3ae3T0Yrcf18/eA1g2WSXqzMqeJm1j8pvAFhm39RHiWWaz/gNk0eP7a+4BVhS2eEaOVjwvvR/sMBZdCHiL59F7LwcLa7IHPXMHsAyyQ7XyMGCt/20/CYAAPorO1wjBwteZvVS+Y0AAPRPdrexHC54j2+X3wwAQP9kdxvL4YKXKzDysNrSBAAA9Ed2tsbq2WEOF7zMxrXyJAAA9Ed2tkLKBe/1i/IkAAD0R3a2QsoFL2PLFACA/hrbGqWZyQVvbzfixsXyhAAALE52tOxqEzK54GWeb5QnBQBgcbKjHZGjC15m/ZPyxAAAdC+72TE5vuBlnFELALB4Y2fOTsp0BW/n+4iV8+UfBADA/GUXy042RaYreJmtzfIPAwBg/rKLTZnpC17m2Xr5BwIAMD/ZwVqkXcHLKHkAAN1pWe4y7QteJm8ReiYPAGB+smu1+Fq2mZMVvEw+5Gd1LQDA7GXHmnJBRSknL3jD2CcPAGB2ptjn7ricvuBlcjdlx5oBAJxcdqljTqiYNrMpeJk8Dy0PvS19YAAAJssOdcTZsm0zu4I3zOsXERvXIq6eK/8CAAAMulJ2puxOM87sC94wb15FPL4dsXqp/EsBAHyIshtlR8quNKfMr+A1s/10cOvRqlsA4EOUHSi7UHaiDtJNwWsm22ru6fLoVsT9KxF3Lw8eKsy9XnytCwAso+ww2WWy02S3yY6TXSc7zxzv1E1K9wVPREREROaYiP8DSge4Z/yo1AcAAAAASUVORK5CYII=" InformativeScreenshot="20c1922b54c72c785c8ac8ece3785418.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='OrangeHRM' /&gt;" SearchSteps="FuzzySelector, Image" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAGAUExURf///v759eh8Hv77+Prl0/fRsORpAOd5GP/+/f748/3+/fG1f/K0f+yZUOqMPORlAPjZved6GU2xdeZwCQCKL/738TCmYud1Ev328P3y6azbwPCrbvjVtu6fW/779/72777jzd6qbf327yCcUv307edzEOmEK+mAJP7fyZHQrvHu4cTl0v3z6/K2gvO6iPzw5v/8+fz+/fGudPzl0vK5hvzs3uZxC++kY+d5Gfzt4eRnAORoAE6ydxCXR/CoafjWuf77+eRmAPCpbO6iYfzv5Mnm1SeeVN/y6Od+IWS6hO6dViWkX++lY53YuyedU/CmaO6fWv748uNoAPv9+/rjz++jX/bNqfTEmff8+fzu4fXHoPnexgCILvrizeZyDTSmY/jYvOZwCla0fPCqbffTs7Pexe2aUf///////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOlg/doAAABpdFJOU///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////AKA3ZhoAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAC3SURBVChTY8iAg/QMQyAJFwiW8hRS1kYSSBKJt/UD0jABVzdNsRgFIAMqkJ6RauPtmw4TkA/JSNdS9AExwQL2TGmhGaIZxl7+zGABlkQZIBGWkcERIA0W4HUGGgEGLhaRQAFG8SgINyNDjj0FpILJHKIASMYlgAT02FghetKTzcBmqHgIh2ekp2cE8gQZpYMEMmLZrdScdO3U+fmAHJBAhqWsqrUjmyA3SCdYICNDXyAjGsTNyAAAT09UkZxCysoAAAAASUVORK5CYII=" InformativeScreenshot="3a47e0b81080979bb32af126f9913927.jpg" Selector="&lt;html app='chrome.exe' title='OrangeHRM' /&gt;" Url="https://opensource-demo.orangehrmlive.com/web/index.php/auth/login" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
